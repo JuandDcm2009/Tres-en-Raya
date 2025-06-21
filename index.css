@@ -3,12 +3,12 @@ body {
   background-color: white;
   background-repeat: no-repeat;
   height: 100%;
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 
 h1 {
-  padding-top: 90px;
+  padding-top: 10px;
   color: black;
   font-family: "Tiny5";
   display: flex;
@@ -17,18 +17,18 @@ h1 {
 }
 
 #slot {
-  margin: 6px;
+  margin: 3px;
   width: 100px;
-  height: 80px;
+  height: 90px;
+  padding-top: 10px;
   background-color: white;
   color: rgb(0, 0, 0);
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-family: "Tiny5";
   text-align: center;
-  padding-top: 20px;
   transition: all 0.2s ease;
   border: #000000 solid 4px;
-  box-shadow: 5px 5px 0px black;
+  box-shadow: 4px 4px 0px black;
 }
 
 #slot:hover {
@@ -44,4 +44,49 @@ h1 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.button_reset {
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-family: "tiny5";
+  width: 100px;
+  font-size: 1.8rem;
+  border: #000000 solid 4px;
+  box-shadow: 3px 3px 0px black;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.button_reset:hover {
+  transform: scale(95%);
+  color: white;
+  background-color: black;
+  cursor: default;
+  cursor: pointer;
+}
+
+.button_reset:active {
+  background-color: white;
+}
+
+#winner {
+  margin: 3px;
+  width: 100px;
+  height: 90px;
+  padding-top: 10px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 4.5rem;
+  font-family: "Tiny5";
+  text-align: center;
+  transition: all 0.4s ease;
+  border: #000000 solid 4px;
+  box-shadow: 4px 4px 0px black;
+}
+
+#winner:hover {
+  transform: rotate(5deg) scale(95%);
 }

@@ -11,10 +11,11 @@ def getWinner():
         global combinaciones, positions
         for combo in combinaciones:
             a, b, c = combo
-            if positions[a] == positions[b] == positions[c] != " ":
-                if positions[a] != 0:
-                    print(f"The winner is {positions[a]}")
-        return None
+            if positions[a] == positions[b] == positions[c] != 0:
+                print(combo)
+                print(f"The winner is {positions[a]}")
+                return combo 
+        return [0, 0, 0]
 
 class Api:
     
@@ -25,20 +26,21 @@ class Api:
                 positions[position] = turno
                 turno = 2
                 print(positions)
-                getWinner()
-                return "X"
+                return {"text":"X", "win": getWinner()}
             else:
                 positions[position] = turno
                 turno = 1
                 print(positions)
-                getWinner()
-                return "O"
+                return {"text":"O", "win": getWinner()}
         else:
-            if positions[positions] == 1:
-                return "X"
-            elif positions[positions] == 2:
-                return "O"
-    
+            if positions[position] == 1:
+                return {"text":"X", "win": getWinner()}
+            elif positions[position] == 2:
+                return {"text":"O", "win": getWinner()}
+    def resetPosition(self):
+         global positions, turno
+         positions = [None, 0, 0, 0, 0, 0, 0, 0, 0, 0,]
+         turno = 1
 api = Api()
 webview.create_window('TicTacToe', 'index.html', js_api=api)
 webview.start(debug=True)
