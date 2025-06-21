@@ -1,0 +1,44 @@
+html,
+body {
+  background: linear-gradient(to bottom, #2a2c2f, #000000);
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding-top: 90px;
+  color: white;
+  font-family: "roboto";
+  display: flex;
+  justify-content: center;
+}
+
+#slot {
+  width: 100px;
+  height: 80px;
+  margin: 4px;
+  background-color: #0000002d;
+  border-radius: 6px;
+  color: white;
+  font-size: 2.5rem;
+  font-family: "roboto";
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.5s ease;
+  border: #ffffffc5 solid 2px;
+}
+
+#slot:hover {
+  transform: scale(106%);
+  border: #00ff00 solid 2px;
+  color: #00ff00;
+}
+
+#slots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
